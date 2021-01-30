@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import styled from 'styled-components';
 
 const Container = styled.div`
@@ -9,7 +9,7 @@ const Container = styled.div`
     display: flex;
     flex-direction: column;
 `;
-const SortButton = styled.button`
+const SortButton = styled.div`
     background-color: transparent;
     border: none;
     font-size: 16px;
@@ -20,9 +20,9 @@ const SortButton = styled.button`
     align-self: flex-end;
 `;
 const SortBox = styled.div`
-    display: ${props=>props.display ? props.display : "none"};
-    width:auto;
-    height:auto;
+    display: ${props=>props.expanded ? "flex" : "none"};
+    min-width:105px;
+    min-height: 110px;
     border: 1px solid #428811;
     border-radius: 6px;
     padding: 5px;
@@ -45,12 +45,15 @@ const SortText = styled.text`
 `;
 
 
-const Sort = ({display, onSortClick}) => {
+const Sort = () => {
+    const [expanded, setExpanded] = useState(false);
+
+
     return <Container>
         <SortButton onClick={()=>{
-            onSortClick();
-            }}>SORT</SortButton>
-        <SortBox>
+            setExpanded(!expanded);
+        }}>SORT</SortButton>
+        <SortBox expanded={expanded}>
             <SortTitle>Title</SortTitle>
             <SortText>Alphabetically: A - Z</SortText>
             <SortText>Alphabetically: Z - A</SortText>
@@ -62,8 +65,7 @@ const Sort = ({display, onSortClick}) => {
 }
 
 Sort.defaultProps = {
-    display:"none",
-    onSortClick:()=>{}
+
 }
 
 export default Sort;

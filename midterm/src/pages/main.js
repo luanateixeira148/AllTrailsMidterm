@@ -4,6 +4,12 @@ import Sort from 'comps/Sort';
 import NewNoteButton from 'comps/NewNoteButton';
 
 const Main = () => {
+
+    const HandleSortClick = () => {
+
+    }
+
+
     return <div className="body">
         <div className="notes">
             <NoteCard />
