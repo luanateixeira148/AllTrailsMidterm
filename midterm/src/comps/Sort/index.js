@@ -36,7 +36,9 @@ const SortTitle = styled.text`
     color: #428811;
     padding: 3px;
 `;
-const SortText = styled.text`
+const SortText = styled.div`
+    // background-color: ${props=>props.selected ? "#ECF3E7" : "none"};
+    width:100%;
     font-size: 10px;
     font-family: roboto;
     font-weight: 500
@@ -47,7 +49,10 @@ const SortText = styled.text`
 
 const Sort = () => {
     const [expanded, setExpanded] = useState(false);
-
+    const [selected1, setSelected1] = useState(false);
+    const [selected2, setSelected2] = useState(false);
+    const [selected3, setSelected3] = useState(false);
+    const [selected4, setSelected4] = useState(false);
 
     return <Container>
         <SortButton onClick={()=>{
@@ -55,11 +60,27 @@ const Sort = () => {
         }}>SORT</SortButton>
         <SortBox expanded={expanded}>
             <SortTitle>Title</SortTitle>
-            <SortText>Alphabetically: A - Z</SortText>
-            <SortText>Alphabetically: Z - A</SortText>
+            <SortText
+            selected1={selected1}
+            onClick={()=>{
+                setSelected1(!selected1); setSelected2(false); setSelected3(false); setSelected4(false);
+            }}>Alphabetically: A - Z</SortText>
+            <SortText
+            selected2={selected2}
+            onClick={()=>{
+                setSelected1(false); setSelected2(!selected2); setSelected3(false); setSelected4(false);
+            }}>Alphabetically: Z - A</SortText>
             <SortTitle>Labels</SortTitle>
-            <SortText>Alphabetically: A - Z</SortText>
-            <SortText>Alphabetically: Z - A</SortText>
+            <SortText
+            selected3={selected3}
+            onClick={()=>{
+                setSelected1(false); setSelected2(false); setSelected3(!selected3); setSelected4(false);
+            }}>Alphabetically: A - Z</SortText>
+            <SortText
+            selected4={selected4}
+            onClick={()=>{
+                setSelected1(false); setSelected2(false); setSelected3(false); setSelected4(!selected4);
+            }}>Alphabetically: Z - A</SortText>
         </SortBox>
     </Container>
 }
