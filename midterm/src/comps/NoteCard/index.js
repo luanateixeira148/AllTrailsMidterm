@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import Label from '../Label';
+import RightArrow from '../NoteCard/right-arrow.png';
 
 const NoteCardContainer = styled.div`
     min-width: 300px;
@@ -51,7 +52,8 @@ const MoreIcon = styled.div`
 
 `;
 const SeeList = styled.div`
-
+    padding-right: 5px;
+    
 `;
 const LeftBox = styled.div`
     width: 50%;
@@ -60,6 +62,7 @@ const RightBox = styled.div`
     width: 50%;
     display:flex;
     justify-content: flex-end;
+    align-items: center;
 `;
 const NoteCard = ({NoteTitle, NoteItem}) => {
     return <NoteCardContainer>
@@ -85,6 +88,7 @@ const NoteCard = ({NoteTitle, NoteItem}) => {
             </LeftBox>
             <RightBox>
                 <SeeList>See List</SeeList>
+                <img src={RightArrow} alt="RightArrow" />
             </RightBox>
         </NoteFooter>
     </NoteCardContainer>
