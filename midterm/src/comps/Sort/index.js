@@ -20,12 +20,12 @@ const SortButton = styled.button`
     align-self: flex-end;
 `;
 const SortBox = styled.div`
+    display: ${props=>props.display ? props.display : "none"};
     width:auto;
     height:auto;
     border: 1px solid #428811;
     border-radius: 6px;
     padding: 5px;
-    display: flex;
     flex-direction: column;
     align-items: flex-start;
 `;
@@ -45,9 +45,11 @@ const SortText = styled.text`
 `;
 
 
-const Sort = () => {
+const Sort = ({display, onSortClick}) => {
     return <Container>
-        <SortButton>SORT</SortButton>
+        <SortButton onClick={()=>{
+            onSortClick();
+            }}>SORT</SortButton>
         <SortBox>
             <SortTitle>Title</SortTitle>
             <SortText>Alphabetically: A - Z</SortText>
@@ -60,7 +62,8 @@ const Sort = () => {
 }
 
 Sort.defaultProps = {
-
+    display:"none",
+    onSortClick:()=>{}
 }
 
 export default Sort;
