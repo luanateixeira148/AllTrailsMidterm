@@ -1,16 +1,15 @@
 import React from 'react';
-import NoteCard from 'comps/NoteCard';
-import Sort from 'comps/Sort';
-import NewNoteButton from 'comps/NewNoteButton';
+import '../pages/main.scss';
+import NoteCard from '../comps/NoteCard';
+import Sort from '../comps/Sort';
+import NewNoteButton from '../comps/NewNoteButton';
+import BottomMenu from '../comps/BottomMenu';
 
 const Main = () => {
 
 
     return <div className="body">
         <div className="notes">
-            <NoteCard />
-            <NoteCard />
-            <NoteCard />
             <NoteCard />
             <NoteCard />
             <NoteCard />
@@ -21,7 +20,6 @@ const Main = () => {
         <div className="fixedButton">
             <NewNoteButton />
         </div>
-
     </div>
 }
 
