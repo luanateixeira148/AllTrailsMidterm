@@ -4,8 +4,7 @@ import NoteCard from '../comps/NoteCard';
 import Sort from '../comps/Sort';
 import NewNoteButton from '../comps/NewNoteButton';
 import BottomMenu from '../comps/BottomMenu';
-
-import axios from 'axios';
+import { Link } from 'react-router-dom';
 
 const Main = () => {
 
@@ -18,9 +17,11 @@ const Main = () => {
         <div className="sortMenu">
             <Sort />
         </div>
+        <Link to='/note'>
         <div className="fixedButton">
             <NewNoteButton />
         </div>
+        </Link>
     </div>
 }
 

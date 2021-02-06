@@ -26,17 +26,6 @@ function NoteForm({ addNote }) {
     }
   }
 
-  // const CssTextField = withStyles({
-  //   root: {
-  //     "& label.Mui-focused": {
-  //       color: "#428811"
-  //     },
-  //     "& .MuiInput-underline:after": {
-  //       borderBottomColor: "#428811"
-  //     }
-  //   }
-  // })(TextField);
-
   return (
     <form className="note-form" onSubmit={handleSubmit}>
       <TextField
