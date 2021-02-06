@@ -12,8 +12,20 @@ function Note({ note, toggleComplete, removeNote }) {
   }
 
   return (
-    <ListItem style={{ display: "flex" }}>
-      <Checkbox checked={note.completed} onClick={handleCheckboxClick} />
+    <ListItem 
+    style={{ 
+      display: "flex",
+      // alignItems: "flex-start",
+      color: "#828282",
+      marginBottom: "-10%",
+
+    }}
+    >
+      <Checkbox checked={note.completed} onClick={handleCheckboxClick} 
+      style={{
+        color: "#428A13"
+      }}
+      />
       <Typography
         variant="body1"
         style={{

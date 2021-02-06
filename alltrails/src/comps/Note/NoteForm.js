@@ -45,6 +45,10 @@ function NoteForm({ addNote }) {
         name="task"
         value={note.task}
         onChange={handleTaskInputChange}
+        style={{
+          marginBottom: "-3%",
+          width: "85%",
+        }}
         inputProps={{
           style: { color: "#428811"}
         }}

@@ -3,13 +3,17 @@ import styled from 'styled-components';
 import { BsArrowLeft } from 'react-icons/bs';
 
 const TopContainer = styled.div`
-  min-width: 381px;
-  max-width: 381px;
+  min-width: 411px;
+  max-width: 411px;
   display: flex;
+  position: fixed;
+  top: 0%;
   flex-direction: row;
   align-items: center;
   justify-content: flex-start;
-  border-bottom: solid 1px "#828282";
+  border-bottom: solid 1px #e5e5e5;
+  padding-left: 20px;
+  margin-top: 4%;
 `;
 
 const TopContainerContent = styled.h3`
@@ -21,7 +25,6 @@ function TopNav() {
     <TopContainer>
       <BsArrowLeft size="2rem"  color="#428A13" />
       <TopContainerContent>
-
         Title
       </TopContainerContent>
     </TopContainer>

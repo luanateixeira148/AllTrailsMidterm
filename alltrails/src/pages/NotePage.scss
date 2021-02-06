@@ -9,6 +9,7 @@
   max-width: 381px;
   min-height: 679px;
   max-height: 679px;
+  position: relative;
 }
 
 body,
@@ -18,13 +19,21 @@ html,
 }
 
 .note-form {
+  min-width: 381px;
+  max-width: 381px;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
+  margin-top: 20%;
+  margin-left: 12%;
 }
 
 li {
   text-align: initial;
+  min-width: 381px;
+  max-width: 381px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .BottomNav {
