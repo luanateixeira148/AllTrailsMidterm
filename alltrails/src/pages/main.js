@@ -5,8 +5,9 @@ import Sort from '../comps/Sort';
 import NewNoteButton from '../comps/NewNoteButton';
 import BottomMenu from '../comps/BottomMenu';
 
-const Main = () => {
+import axios from 'axios';
 
+const Main = () => {
 
     return <div className="body">
         <div className="notes">
