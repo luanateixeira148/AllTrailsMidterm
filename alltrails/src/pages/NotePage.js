@@ -7,7 +7,6 @@ import NoteList from "../comps/Note/NoteList";
 import BottomNav from "../comps/BottomNav/BottomNav";
 import TopNav from "../comps/TopNav/TopNav";
 
-
 const LOCAL_STORAGE_KEY = "react-note-list-notes";
 
 function NotePage() {
@@ -51,7 +50,7 @@ function NotePage() {
 
   return (
     <div className="NotePage">
-      <TopNav />
+        <TopNav />
       {/* <Typography style={{ padding: 16 }} variant="h3">
         Create your list
       </Typography> */}

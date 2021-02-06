@@ -6,7 +6,7 @@ import { GoLocation } from 'react-icons/go';
 
 const BottomContainer = styled.div`
   position: fixed;
-  bottom: 0%;
+  bottom: 2%;
   min-width: 411px;
   max-width: 411px;
   max-height: 381px;
