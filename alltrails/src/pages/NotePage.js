@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./NotePage.scss";
 import NoteForm from "../comps/NoteForm";
 import NoteList from "../comps/NoteList";
+import BackArrow from "../comps/BackArrow";
 
 const LOCAL_STORAGE_KEY = "react-note-list-notes";
 
@@ -47,6 +48,7 @@ function NotePage() {
 
   return (
     <div className="NotePage">
+      <BackArrow></BackArrow>
       <Typography style={{ padding: 16 }} variant="h1">
         Create your list
       </Typography>
