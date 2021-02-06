@@ -1,8 +1,12 @@
-import Typography from "@material-ui/core/Typography";
+// import Typography from "@material-ui/core/Typography";
 import React, { useEffect, useState } from "react";
 import "./NotePage.scss";
-import NoteForm from "../comps/NoteForm";
-import NoteList from "../comps/NoteList";
+import NoteForm from "../comps/Note/NoteForm";
+import NoteList from "../comps/Note/NoteList";
+// import BackArrow from "../comps/BackArrow";
+import BottomNav from "../comps/BottomNav/BottomNav";
+import TopNav from "../comps/TopNav/TopNav";
+
 
 const LOCAL_STORAGE_KEY = "react-note-list-notes";
 
@@ -47,15 +51,18 @@ function NotePage() {
 
   return (
     <div className="NotePage">
-      <Typography style={{ padding: 16 }} variant="h1">
+      <TopNav />
+      {/* <Typography style={{ padding: 16 }} variant="h3">
         Create your list
-      </Typography>
+      </Typography> */}
+      {/* <BackArrow /> */}
       <NoteForm addNote={addNote} />
       <NoteList
         notes={notes}
         removeNote={removeNote}
         toggleComplete={toggleComplete}
       />
+      <BottomNav className="BottomNav"/>
     </div>
   );
 }

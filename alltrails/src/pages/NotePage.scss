@@ -4,7 +4,11 @@
   height: 100%;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+  min-width: 381px;
+  max-width: 381px;
+  min-height: 679px;
+  max-height: 679px;
 }
 
 body,
@@ -21,4 +25,9 @@ html,
 
 li {
   text-align: initial;
+}
+
+.BottomNav {
+  position: absolute;
+  bottom: 0px;
 }
