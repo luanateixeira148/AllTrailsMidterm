@@ -22,7 +22,7 @@ const SortButton = styled.div`
 const SortBox = styled.div`
     display: ${props=>props.expanded ? "flex" : "none"};
     min-width:105px;
-    min-height: 110px;
+    min-height: 65px;
     border: 1px solid #428811;
     border-radius: 6px;
     padding: 5px;
@@ -41,18 +41,19 @@ const SortText = styled.div`
     width:100%;
     font-size: 10px;
     font-family: roboto;
-    font-weight: 500
+    font-weight: 500;
     color: #828282;
     padding: 2px;
+    margin-top: 5px;
 `;
 
 
-const Sort = () => {
+const Sort = ({onClickAlphAZ, onClickAlphZA}) => {
     const [expanded, setExpanded] = useState(false);
-    const [selected1, setSelected1] = useState(false);
-    const [selected2, setSelected2] = useState(false);
-    const [selected3, setSelected3] = useState(false);
-    const [selected4, setSelected4] = useState(false);
+    // const [selected1, setSelected1] = useState(false);
+    // const [selected2, setSelected2] = useState(false);
+    // const [selected3, setSelected3] = useState(false);
+    // const [selected4, setSelected4] = useState(false);
 
     return <Container>
         <SortButton onClick={()=>{
@@ -61,16 +62,19 @@ const Sort = () => {
         <SortBox expanded={expanded}>
             <SortTitle>Title</SortTitle>
             <SortText
-            selected1={selected1}
-            onClick={()=>{
-                setSelected1(!selected1); setSelected2(false); setSelected3(false); setSelected4(false);
+            // selected1={selected1}
+            onClick={()=>{onClickAlphAZ()
+                
+                // setSelected1(!selected1); setSelected2(false); 
+                // setSelected3(false); setSelected4(false);
             }}>Alphabetically: A - Z</SortText>
             <SortText
-            selected2={selected2}
-            onClick={()=>{
-                setSelected1(false); setSelected2(!selected2); setSelected3(false); setSelected4(false);
+            // selected2={selected2}
+            onClick={()=>{onClickAlphZA()
+                // setSelected1(false); setSelected2(!selected2); 
+                // setSelected3(false); setSelected4(false);
             }}>Alphabetically: Z - A</SortText>
-            <SortTitle>Labels</SortTitle>
+            {/* <SortTitle>Labels</SortTitle>
             <SortText
             selected3={selected3}
             onClick={()=>{
@@ -80,13 +84,14 @@ const Sort = () => {
             selected4={selected4}
             onClick={()=>{
                 setSelected1(false); setSelected2(false); setSelected3(false); setSelected4(!selected4);
-            }}>Alphabetically: Z - A</SortText>
+            }}>Alphabetically: Z - A</SortText> */}
         </SortBox>
     </Container>
 }
 
 Sort.defaultProps = {
-
+    onClickAlphAZ: ()=>{},
+    onClickAlphZA: ()=>{},
 }
 
 export default Sort;
