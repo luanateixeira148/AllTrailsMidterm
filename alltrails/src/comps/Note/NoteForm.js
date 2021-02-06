@@ -1,5 +1,7 @@
-import { Button, TextField } from "@material-ui/core";
 import React, { useState } from "react";
+// import { TextField } from '@material-ui/core/';
+import TextField from '@material-ui/core/TextField';
+// import { withStyles } from '@material-ui/core/styles';
 import {v4 as uuidv4} from "uuid";
 
 function NoteForm({ addNote }) {
@@ -24,6 +26,17 @@ function NoteForm({ addNote }) {
     }
   }
 
+  // const CssTextField = withStyles({
+  //   root: {
+  //     "& label.Mui-focused": {
+  //       color: "#428811"
+  //     },
+  //     "& .MuiInput-underline:after": {
+  //       borderBottomColor: "#428811"
+  //     }
+  //   }
+  // })(TextField);
+
   return (
     <form className="note-form" onSubmit={handleSubmit}>
       <TextField
@@ -32,6 +45,9 @@ function NoteForm({ addNote }) {
         name="task"
         value={note.task}
         onChange={handleTaskInputChange}
+        inputProps={{
+          style: { color: "#428811"}
+        }}
       />
       {/* <Button type="submit"></Button> */}
     </form>
