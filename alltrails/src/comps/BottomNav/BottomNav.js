@@ -5,10 +5,10 @@ import { RiRecordCircleLine } from 'react-icons/ri';
 import { GoLocation } from 'react-icons/go';
 
 const BottomContainer = styled.div`
-  border-top: solid 1px "#9f9f9f";
-  /* position: fixed;
-  bottom: 0px; */
-  min-width: 381px;
+  position: fixed;
+  bottom: 0%;
+  min-width: 411px;
+  max-width: 411px;
   max-height: 381px;
   /* min-height: 57px;
   max-height: 57px; */
@@ -16,11 +16,10 @@ const BottomContainer = styled.div`
   flex-direction: row;
   align-items: center;
   justify-content: space-evenly;
+  border-top: solid #e5e5e5 1px;
+  padding-top: 10px;
 `;
 
-// const Icons = styled.div`
- 
-// `;
 
 const Search = styled.div`
   color: #828282;
@@ -54,14 +53,13 @@ function BottomNav() {
   return (
     <BottomContainer>
 
-      {/* <Icons> */}
         <Search>
         <BsSearch color="#828282" size="20"/>
           <Title>Search</Title>
         </Search>
 
         <Plan>
-          <BsFillHeartFill color="#428811" size="20" />
+          <BsFillHeartFill color="#428811" size="25" />
           <Title>Plan</Title>
         </Plan>
 
@@ -79,7 +77,6 @@ function BottomNav() {
           <BsPerson color="#828282" size="25" />
           <Title>History</Title>
         </Profile>
-      {/* </Icons> */}
 
     </BottomContainer>
   )

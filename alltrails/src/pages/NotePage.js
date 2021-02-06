@@ -57,7 +57,7 @@ function NotePage() {
       </Typography> */}
       {/* <BackArrow /> */}
       <NoteForm addNote={addNote} />
-      <NoteList
+      <NoteList className="List"
         notes={notes}
         removeNote={removeNote}
         toggleComplete={toggleComplete}
