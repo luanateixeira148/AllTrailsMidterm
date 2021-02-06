@@ -14,50 +14,50 @@ const Container = styled.footer`
 
 
 const Img1 = styled.image`
-padding: 50px;
+padding: 10px;
 `;
 
 const Img2 = styled.image`
-padding: 50px;
+padding: 10px;
 `;
 
 const Img3 = styled.image`
-padding: 50px;
+padding: 10px;
 `;
 
 const Img4 = styled.image`
-padding: 50px;
+padding: 10px;
 `;
 
 const Img5 = styled.image`
-padding: 50px;
+padding: 10px;
 `;
 
 const BottomMenu = () => {
     return (
     <Container>
         <Img1>
-     <img src={search}alt="search" width="50px" height="50px"/>
+     <img src={search}alt="search" width="33.5px" height="33.5px"/>
         <div>Explore
         </div>
         </Img1>
         <Img2>
-     <img src={favorite}alt="favorite" width="50px" height="50px"/>
+     <img src={favorite}alt="favorite" width="33.5px" height="33.5px"/>
      <div>Plan
         </div>
         </Img2>
         <Img3>
-     <img src={disc}alt="disc" width="50px" height="50px"/>
+     <img src={disc}alt="disc" width="33.5px" height="33.5px"/>
      <div>Record
         </div>
         </Img3>
         <Img4>
-     <img src={location}alt="location" width="50px" height="50px"/>
+     <img src={location}alt="location" width="33.5px" height="33.5px"/>
      <div>History
         </div>
         </Img4>
         <Img5>
-     <img src={person}alt="person" width="50px" height="50px"/>
+     <img src={person}alt="person" width="33.5px" height="33.5px"/>
      <div>Profile
         </div>
         </Img5>
