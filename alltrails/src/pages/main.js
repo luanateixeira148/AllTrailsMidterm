@@ -5,7 +5,6 @@ import Sort from '../comps/Sort';
 import NewNoteButton from '../comps/NewNoteButton';
 import BottomMenu from '../comps/BottomMenu';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
 
 const Main = () => {
 
