@@ -5,50 +5,20 @@ import Sort from '../comps/Sort';
 import NewNoteButton from '../comps/NewNoteButton';
 import BottomMenu from '../comps/BottomMenu';
 import { Link } from 'react-router-dom';
-// import axios from 'axios';
+// import {notes} from '../database.js';
+
 
 const Main = () => {
 
-    // const [titles, setTitles] = useState([]);
-
-    // const [alltitles, setAlltitles] = useState([]);
-
-    // const HandleAZ = () => {
-    //     setTitles(
-    //         alltitles.sort(az)
-    //     )
-    // }
-
-    // const HandleZA = () => {
-    //     setTitles(
-    //         alltitles.sort(za)
-    //     )
-    // }
-
-    // const GetTitles = async() => {
-    //     var resp = await axios.get("");
-    //     console.log("get titles", resp);
-    // }
-    // useEffect(()=>{
-    //     GetTitles()
-    // }, [])
-
     return <div className="body">
         <div className="notes">
-            {/* {titles.map((o)=>{
-                return <NoteCard
-                    NoteTitle={o.title}
-                />
-            })} */}
+
             <NoteCard />
             <NoteCard />
             <NoteCard />
         </div>
         <div className="sortMenu">
-            <Sort 
-            // onClickAlphAZ={HandleAZ}
-            // onClickAlphZA={HandleZA}
-            />
+            <Sort />
         </div>
         <Link to='/note'>
         <div className="fixedButton">
