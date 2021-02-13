@@ -1,6 +1,8 @@
+import { Notes } from '@material-ui/icons';
 import React from 'react';
 import styled from 'styled-components';
 import RightArrow from '../NoteCard/right-arrow.png';
+import {notes} from '../../database';
 
 const NoteCardContainer = styled.div`
     width:88%;    
@@ -42,6 +44,8 @@ const NoteItemIcon = styled.div`
     border-radius: 1px; 
     margin: 5px;
 `;
+const NoteItemText = styled.text``;
+
 const NoteFooter = styled.div`
     width: 100%;
     display: flex;
@@ -66,15 +70,15 @@ const NoteCard = ({NoteTitle, NoteItem}) => {
         <NoteItems>
             <NoteItemBox>
                 <NoteItemIcon />
-                {NoteItem}
+                <NoteItemText>{NoteItem}</NoteItemText>
             </NoteItemBox>
             <NoteItemBox>
                 <NoteItemIcon />
-                {NoteItem}
+                <NoteItemText>{NoteItem}</NoteItemText>
             </NoteItemBox>
             <NoteItemBox>
                 <NoteItemIcon />
-                {NoteItem}
+                <NoteItemText>{NoteItem}</NoteItemText>
             </NoteItemBox>
         </NoteItems>
         <MoreIcon>...</MoreIcon>
