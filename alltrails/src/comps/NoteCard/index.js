@@ -64,21 +64,35 @@ const RightBox = styled.div`
     justify-content: flex-end;
     align-items: center;
 `;
-const NoteCard = ({NoteTitle, NoteItem}) => {
-    return <NoteCardContainer>
-        <NoteTitleBox>{NoteTitle}</NoteTitleBox>
+
+const fakedb = [
+    {
+          id: 1,
+          title: "Hiking gears to buy",
+          item1: "trail shoes",
+          item2: "mask",
+          item3: "wool hat",
+          completed: false
+    }              
+  ]
+
+
+const NoteCard = ({contents}) => {
+    return <div>
+    {contents.map(   o => <NoteCardContainer>
+        <NoteTitleBox>{o.title}</NoteTitleBox>
         <NoteItems>
             <NoteItemBox>
                 <NoteItemIcon />
-                <NoteItemText>{NoteItem}</NoteItemText>
+                <NoteItemText>{o.item1}</NoteItemText>
             </NoteItemBox>
             <NoteItemBox>
                 <NoteItemIcon />
-                <NoteItemText>{NoteItem}</NoteItemText>
+                <NoteItemText>{o.item2}</NoteItemText>
             </NoteItemBox>
             <NoteItemBox>
                 <NoteItemIcon />
-                <NoteItemText>{NoteItem}</NoteItemText>
+                <NoteItemText>{o.item3}</NoteItemText>
             </NoteItemBox>
         </NoteItems>
         <MoreIcon>...</MoreIcon>
@@ -88,12 +102,12 @@ const NoteCard = ({NoteTitle, NoteItem}) => {
                 <img src={RightArrow} alt="RightArrow" />
             </RightBox>
         </NoteFooter>
-    </NoteCardContainer>
+    </NoteCardContainer>)}
+    </div>
 }
 
 NoteCard.defaultProps = {
-    NoteTitle:"Title",
-    NoteItem:"Item"
+    contents: fakedb,
 }
 
 export default NoteCard;
