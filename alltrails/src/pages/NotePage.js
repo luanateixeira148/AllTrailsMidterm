@@ -9,7 +9,7 @@ import TopNav from "../comps/TopNav/TopNav";
 
 const LOCAL_STORAGE_KEY = "react-note-list-notes";
 
-function NotePage() {
+function NotePage() {         
   const [notes, setNotes] = useState([]);
 
   useEffect(() => {
